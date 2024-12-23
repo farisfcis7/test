@@ -1,0 +1,12 @@
+name: my workflow
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: ls "${{github.workspace}}"
+      - name: test2
+        run: echo "repo name is ${{github.repository}}"
+      - name: test3
+        run: echo "branch called is ${{github.ref}}"
